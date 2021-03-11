@@ -5,10 +5,16 @@ def calc_fibonacci(num):
 		return 1
 	
 	n = calc_fibonacci(num - 1) + calc_fibonacci(num - 2)
-	
+
 	return n
 
-def test_fib():
-	assert calc_fibonacci(3) == 2
-	assert calc_fibonacci(2) == 1
-	assert calc_fibonacci(1) == 1
+def main():
+	print("Enter the ith term of fibonnaci number you want: ")
+	print(">> ", end="")
+
+	desired_fib = calc_fibonacci(int(input()))
+
+	print(desired_fib)
+
+if __name__ == '__main__':
+	main()

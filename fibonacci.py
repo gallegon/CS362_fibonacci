@@ -8,6 +8,12 @@ def calc_fibonacci(num):
 
 	return n
 
+def factorial(num):
+	if num == 0:
+		return 1
+	n = num * factorial(num - 1)
+	return n
+
 def main():
 	print("Enter the ith term of fibonnaci number you want: ")
 	print(">> ", end="")
@@ -15,6 +21,7 @@ def main():
 	desired_fib = calc_fibonacci(int(input()))
 
 	print(desired_fib)
+
 
 if __name__ == '__main__':
 	main()
